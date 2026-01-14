@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Audio Scam Finder</title>
+
+    <!-- ✅ THIS WORKS ONLY VIA FLASK -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Audio Scam Finder</h1>
+    <p>Upload your audio file to check if it is AI audio or not</p>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input
+        type="file"
+        name="audio"
+        id="audioInput"
+        accept="audio/*"
+        required
+      />
+      <br /><br />
+      <button type="submit" class="upload-btn">Upload & Analyze</button>
+    </form>
+  </body>
+</html>
