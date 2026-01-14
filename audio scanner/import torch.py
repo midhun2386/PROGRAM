@@ -19,7 +19,7 @@ class AudioDeepfakeDetector(nn.Module):
         return self.resnet(x)
 
 def preprocess_audio(audio_path, target_size=(224, 224)):
-    audio_path="midhun.mp3"
+    audio_path="good morning ai.mp3"
     # 1. Load audio
     y, sr = librosa.load(audio_path, duration=3.0) # Take first 3 seconds
     
@@ -47,7 +47,7 @@ if __name__ == "__main__":
     model.eval() # Set to evaluation mode
     
     # 2. Path to the audio file you want to check
-    audio_path = r"M:\PROGRAM\audio scanner\test_audio.wav" 
+    audio_path = r"M:\PROGRAM\audio scanner\sun.wav"
     
     try:
         # 3. Process and Predict
